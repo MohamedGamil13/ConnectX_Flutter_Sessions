@@ -20,9 +20,8 @@ Each session is organized into its own folder containing the source code and vis
 
 ## 📂 Repository Structure
 Inside each session folder, you will find:
-1.  **`/lib`**: The source code for the session's project.
+1.  **`/code`**: The source code for the session's project.
 2.  **`/screenshots`**: Visual output of what we built during the live session.
-3.  **`README.md`**: Specific notes or tasks related to that session.
 
 ---
 
@@ -37,7 +36,7 @@ Our first dive into Flutter was building a **Modern Digital Wallet UI**.
 To run any session's code locally:
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/ConnectX-Flutter-S26.git](https://github.com/YOUR_USERNAME/ConnectX-Flutter-S26.git)
+    git clone [https://github.com/MohamedGamil13/ConnectX_Sessions_code.git)
     ```
 2.  **Navigate to the session folder:**
     ```bash
