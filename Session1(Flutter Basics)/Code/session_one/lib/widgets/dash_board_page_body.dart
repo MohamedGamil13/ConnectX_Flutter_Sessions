@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:session_one/widgets/action_button.dart';
+import 'package:session_one/widgets/action_button_row.dart';
 import 'package:session_one/widgets/transactions_list_view.dart';
 import 'package:session_one/widgets/visa_card.dart';
 
@@ -23,14 +23,7 @@ class DashBoardPageBody extends StatelessWidget {
           VisaCard(),
           SizedBox(height: 30),
           // --- QUICK ACTIONS ---
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ActionButton(icon: Icons.send, label: "Send"),
-              ActionButton(icon: Icons.wallet, label: "Top Up"),
-              ActionButton(icon: Icons.pie_chart, label: "Stats"),
-            ],
-          ),
+          ActionButtonRow(),
           SizedBox(height: 30),
 
           // --- RECENT TRANSACTIONS ---
