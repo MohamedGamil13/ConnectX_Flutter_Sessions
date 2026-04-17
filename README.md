@@ -36,11 +36,11 @@ Our first dive into Flutter was building a **Modern Digital Wallet UI**.
 To run any session's code locally:
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/MohamedGamil13/ConnectX_Sessions_code.git)
+    git clone [https://github.com/MohamedGamil13/ConnectX_Flutter_Sessions.git)
     ```
 2.  **Navigate to the session folder:**
     ```bash
-    cd Session_01_Fundamentals
+    cd Session1(Flutter Basics)
     ```
 3.  **Install dependencies:**
     ```bash
