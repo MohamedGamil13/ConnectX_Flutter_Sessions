@@ -12,7 +12,7 @@ Each session is organized into its own folder containing the source code and vis
 
 | Session | Topic | Description | Folder Link |
 | :--- | :--- | :--- | :--- |
-| **01** | **Flutter Fundamentals** | From Dart/OOP to Flutter UI. Intro to Widgets, Clean Structure, and State. Includes **SwiftPay** App & Task. | [View Folder](./Session_01_Fundamentals) |
+| **01** | **Flutter Fundamentals** | From Dart/OOP to Flutter UI. Intro to Widgets, Clean Structure, and State. Includes **SwiftPay** App & Task. | [View Folder](./Session1(Flutter Basics)) |
 | **02** | *Coming Soon* | Description for the next session will be updated here. | -- |
 | **03** | *Coming Soon* | Description for the next session will be updated here. | -- |
 
