@@ -1,6 +1,6 @@
 {
-    "name": "profile",
-    "short_name": "profile",
+    "name": "session_two",
+    "short_name": "session_two",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

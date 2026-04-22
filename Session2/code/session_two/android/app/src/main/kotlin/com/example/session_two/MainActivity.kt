@@ -1,4 +1,4 @@
-package com.example.profile
+package com.example.session_two
 
 import io.flutter.embedding.android.FlutterActivity
 
