@@ -1,4 +1,4 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart'; // استيراد الباكيج
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const ConnectXEventApp());
@@ -12,15 +12,14 @@ class ConnectXEventApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: 'Poppins', // استخدام الخط المخصص
-        colorSchemeSeed: const Color(0xFF1A237E), // لون ConnectX الأزرق
+        fontFamily: 'Poppins',
+        colorSchemeSeed: const Color(0xFF1A237E),
       ),
       home: const MainHolderPage(),
     );
   }
 }
 
-// 1. الصفحة الأساسية اللي بتمسك الـ Nav Bar والـ State
 class MainHolderPage extends StatefulWidget {
   const MainHolderPage({super.key});
 
@@ -29,11 +28,9 @@ class MainHolderPage extends StatefulWidget {
 }
 
 class _MainHolderPageState extends State<MainHolderPage> {
-  int _currentIndex = 0; // State لـ Index الصفحة الحالية
-
-  // قائمة بالصفحات اللي هنبدل بينها
+  int _currentIndex = 0;
   final List<Widget> _pages = const [
-    EventsDashboardPage(), // الصفحة الإبداعية
+    EventsDashboardPage(),
     Center(child: Text("Search Events")),
     Center(child: Text("My Tickets")),
     Center(child: Text("Profile Settings")),
@@ -44,11 +41,10 @@ class _MainHolderPageState extends State<MainHolderPage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF0F2F5),
 
-      // 2. تطبيق الـ Curved Navigation Bar Package
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent, // لجعل الخلفية شفافة
-        color: const Color(0xFF1A237E), // لون الـ Bar نفسه
-        buttonBackgroundColor: const Color(0xFF1A237E), // لون الزرار المرتفع
+        backgroundColor: Colors.transparent,
+        color: const Color(0xFF1A237E),
+        buttonBackgroundColor: const Color(0xFF1A237E),
         height: 60,
         index: _currentIndex,
         items: const [
@@ -57,7 +53,6 @@ class _MainHolderPageState extends State<MainHolderPage> {
           Icon(Icons.confirmation_number, size: 30, color: Colors.white),
           Icon(Icons.person, size: 30, color: Colors.white),
         ],
-        // شرح الـ State Update: عند الضغط، غير الـ index
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -65,13 +60,11 @@ class _MainHolderPageState extends State<MainHolderPage> {
         },
       ),
 
-      // تبديل المحتوى بناءً على الـ Index
       body: _pages[_currentIndex],
     );
   }
 }
 
-// 3. الصفحة الإبداعية: ConnectX Events Dashboard
 class EventsDashboardPage extends StatelessWidget {
   const EventsDashboardPage({super.key});
 
@@ -79,9 +72,14 @@ class EventsDashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // --- Header الإبداعي (شرح الـ Containers المتداخلة) ---
+        // EdgeInsets.fromLTRB(25, 60, 25, 30)
         Container(
-          padding: const EdgeInsets.fromLTRB(25, 60, 25, 30),
+          padding: const EdgeInsets.only(
+            left: 25,
+            top: 60,
+            right: 25,
+            bottom: 30,
+          ),
           decoration: const BoxDecoration(
             color: Color(0xFF1A237E),
             borderRadius: BorderRadius.only(
@@ -103,11 +101,10 @@ class EventsDashboardPage extends StatelessWidget {
                       height: 1.2,
                     ),
                   ),
-                  // استخدام الـ Asset Image (لوجو ConnectX)
+
                   CircleAvatar(
                     radius: 20,
                     backgroundColor: Colors.white24,
-                    // استخدم AssetImage هنا مباشرة
                     backgroundImage: AssetImage(
                       'assets/images/connectLogo.jpg',
                     ),
@@ -115,7 +112,7 @@ class EventsDashboardPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 25),
-              // حقل البحث المودرن (TextField)
+
               TextField(
                 decoration: InputDecoration(
                   filled: true,
@@ -137,7 +134,6 @@ class EventsDashboardPage extends StatelessWidget {
 
         const SizedBox(height: 20),
 
-        // --- قائمة الإيفينتات (الـ Grid الإبداعي) ---
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -148,7 +144,7 @@ class EventsDashboardPage extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 15),
-                // شرح الـ Layout Mastery: GridView
+
                 _buildEventCard("Flutter Workshop", "Aug 15", Colors.orange),
                 _buildEventCard("AI Tech Talk", "Sep 02", Colors.purple),
                 _buildEventCard("ConnectX Hackathon", "Oct 10", Colors.green),
@@ -160,7 +156,6 @@ class EventsDashboardPage extends StatelessWidget {
     );
   }
 
-  // --- Reusable Widget للإيفينت كارد (شرح الـ Refactoring) ---
   Widget _buildEventCard(String title, String date, Color color) {
     return Card(
       elevation: 0,
